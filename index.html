@@ -59,7 +59,7 @@
     </style>
     <script>
         async function updateSelection() {
-            var html = await fetch("https://pointgo.id/games/mobile-legends-1").then(x => x.text());
+            var html = await fetch("https://cors-anywhere.herokuapp.com/https://pointgo.id/games/mobile-legends-1").then(x => x.text());
             html = html.split("\n");
             var product = [];
             html.forEach((x, i) => {
