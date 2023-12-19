@@ -1,4 +1,4 @@
-function process_order() {
+(() => {
     var repeat = 10;
 
     var user_id = $("input[name=user_id]").val();
@@ -21,4 +21,4 @@ function process_order() {
     }
 
     alert("Buying..., click OK and wait to open tab");
-}
+})
