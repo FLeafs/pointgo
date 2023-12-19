@@ -1,0 +1,24 @@
+function process_order() {
+    var repeat = 10;
+
+    var user_id = $("input[name=user_id]").val();
+    var zone_id = $("input[name=zone_id]").val();
+    var product = $("input[name=product]:checked").val();
+    var method = $("input[name=method]:checked").val();
+    var voucher = $("input[name=voucher]").val();
+    var email_order = $("input[name=email_order]").val();
+    var wa = $("input[name=wa]").val();
+
+    for (let i = 0; i < repeat; i++) {
+        fetch(window.location.href, {
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded",
+                "Referer": "https://pointgo.id/games/mobile-legend-game",
+            },
+            "body": "user_id=" + user_id + "&zone_id=" + zone_id + "&username=&method=" + method + "&product=" + product + "&wa=&target=ml&voucher=&tombol=submit",
+            "method": "POST"
+        }).then(x => window.open(x.url, "_blank"));
+    }
+
+    alert("Buying..., click OK and wait to open tab");
+}
